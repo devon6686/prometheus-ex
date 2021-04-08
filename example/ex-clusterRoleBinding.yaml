@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: prometheus-ex
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: prometheus-ex
+subjects:
+- kind: ServiceAccount
+  name: prometheus-ex
+  namespace: default
